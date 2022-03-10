@@ -14,14 +14,17 @@ students = [
    create_student("윤인성", 87, 98, 88, 95),
    create_student("윤인성", 87, 98, 88, 95)
 ]
+def get_sum(students):
+    score_sum = student["korean"] + student["math"] +  student["english"] + student["science"]
+    return score_sum
 
-# 학생을 한 명씩 반복
+    # 학생을 한 명씩 반복
+def get_avg(student):
+    return get_sum(student) / (len(student) -1)
+
+def student_to_string(student):
+    return "{}\t{}\t{}".format(student["name"], get_sum(student), get_avg(student))
 print("이름", "총점", "평균", sep = "\t")
-
-for student in students:
-    # 점수의 총합과 평균
-    score_sum = student["korean"] + student["math"] + \
-        student["english"] + student["science"]
-    score_average = score_sum / 4
     # print
-    print(student["name"], score_sum, score_average, sep="\t")
+for student in students:
+    print(student_to_string(student))
