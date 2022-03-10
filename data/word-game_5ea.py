@@ -13,6 +13,13 @@ import random
 
 # 1. word.txt 파일로 부터 단어를 읽어들임
 content = open("word.txt", "r")
+# with open('data/word.txt', 'r') as file:
+# 방법1
+# read_words = file.readlines()
+# print(readwords)
+# for word in read_words:
+#  print(word.strip().rsplit("\n"))  => 맨 오른쪽에 있는 \n을 제거해줌
+# 방법2
 
   # 단어들 출력 
 run = content.read()
@@ -25,6 +32,7 @@ print("입력하신 단어들은: ", typed_word, "입니다.")
 
 
 # 3. 리스트 단어를 썩어서, 랜덤하게 하나의 단어를 뽑아서 제시함.
+# qs =temp[random.randrange(0,len(temp))]
 choiceWord = random.choiceWord(content)
 print(choiceWord)
 
