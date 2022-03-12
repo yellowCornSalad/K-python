@@ -5,7 +5,7 @@ import sys
 
 # print call parameter(매개변수)
 print(sys.argv)
-print("-------------------------")
+print("---")
 
 # print local info.
 # print("get mac settings:()", sys.getwindowsversion())
