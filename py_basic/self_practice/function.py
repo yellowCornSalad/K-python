@@ -7,3 +7,8 @@ students = [
 print("이름", "총점", "평균", sep = "\t")
 for student in students:
     # 점수의 총합과 평균 계산
+    score_sum = student["korean"] + student["math"] + student["english"] + student["science"]
+    score_average = score_sum / 4
+    # 출력
+    print(student["name"], score_sum, score_average, sep = "\t")
+    
