@@ -10,4 +10,9 @@ dic['python'] = 'Any of various nonvenomous snakes of the world'
 
 # 포켓용사전
 smalldic = {'dictionary' : 'reference', 'python': 'snake'}
-print(smalldic['python'])
+# print(smalldic['python'])
+print(smalldic)
+
+# 원소 삭제
+del smalldic['dictionary']
+print(smalldic)
