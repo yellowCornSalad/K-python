@@ -15,4 +15,15 @@ print(smalldic)
 
 # 원소 삭제
 del smalldic['dictionary']
-print(smalldic)
+# print(smalldic)
+
+# dictionary => list
+family = {'boy':'choi', 'girl':'kim', 'baby':'little'}
+# 딕셔너리의 family 키들을 새로운 리스트에 담는다.
+print(family.keys())
+# family의 값들을 새로운 리스트에 담는다.
+print(family.values())
+
+# 딕셔너리에 어떤 키 값들이 존재하는지 유무조사
+print('boy' in family) # True
+print('five' in family) # False
