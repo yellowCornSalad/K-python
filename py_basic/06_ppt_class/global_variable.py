@@ -1,5 +1,5 @@
 def func1():
-    global a
+    global a # 전체 a값들을 통일
     a = 10
     print("func1()에서 a값 %d" %a)
 
