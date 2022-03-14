@@ -4,11 +4,15 @@ import random as rd
 a, b = map(int, input('숫자 두 개를 입력하세요: ').split(',')) 
 print(a, b)
 
-# list 객체 내 sort사용
-lotto_all = rd.sample(range(a, b + 1), 6)
-lotto_all.sort()
 
-print(lotto_all)
+
+
+
+# # list 객체 내 sort사용
+# lotto_all = rd.sample(range(a, b + 1), 6)
+# lotto_all.sort()
+
+# print(lotto_all)
 
 
 
