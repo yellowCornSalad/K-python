@@ -5,7 +5,7 @@ class Car:
 
     def __init__(self, value1, value2):
         self.color = value1
-        self.color = value2
+        self.speed = value2
     
 # 메인 코드
 myCar1 = Car("빨강", 30)
