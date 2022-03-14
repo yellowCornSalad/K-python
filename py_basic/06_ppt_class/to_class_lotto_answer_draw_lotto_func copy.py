@@ -1,0 +1,58 @@
+# class로 변경
+
+
+import random
+
+class Lotto:
+
+  
+## 함수 정의부
+def inputRange():
+  input_value = input("로또를 위한 두 숫자 범위 입력받기 예) 1, 100 >> ")
+  input_value = input_value.strip().split(",")
+  #print(input_value[0],input_value[1])
+  #print(input_value)
+  return int(input_value[0]), int(input_value[1])
+
+# 랜덤하게 숫자 1개 뽑기
+def getNumber(n1, n2):
+  return random.randrange(n1, n2)
+
+# 로또 숫자 뽑기
+def getLotto(n1, n2):
+  lotto_list =[] # 뽑은 로또 숫자 리스트
+  while True:
+    num = getNumber(n1, n2)  # 랜덤하게 숫자 뽑기
+    
+    if num not in lotto_list :
+      lotto_list.append(num)
+    # lotto_list 갯수가 6이면
+    if len(lotto_list) == 6:
+      break
+  lotto_list.sort()
+  #print(lotto_list)
+  return lotto_list
+
+def printLotto(lotto) :  
+  print()
+  print("추첨된 로또 번호 ===>  ", end="")
+
+  # for i in range(0, 6):
+  #   print("%d " % lotto_list[i])
+  for i in lotto:
+    print("%d " % i, end="")
+  print()
+  
+
+## 메인 코드 부분 ##
+print("** 로또 추첨을 시작합니다. ** \n");
+
+# 로또 숫자 범위 입력받기
+n1, n2 = inputRange()
+
+# 로또 숫자 6개 뽑기
+lotto = getLotto(n1, n2)
+
+# 로또 숫자 출력
+printLotto(lotto)
+
